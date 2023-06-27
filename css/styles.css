@@ -95,8 +95,7 @@ h2{
 }
 .card-item:hover,.card-item:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    transition: transform 250ms ease-in-out;
-} 
+    } 
 .container-cards{
     display: flex;
     flex-wrap: wrap;
@@ -184,18 +183,18 @@ display:block;
 padding-top:24px;
 padding-bottom: 25px;
 margin-right: 50px;
-
+transition: transform 250ms ease;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover, .link:focus, .linkto:hover, .linkto:focus, .colorl:hover, .colorl:focus{
 color:var(--brand-color);
-transition: 250ms;
+
 }
 
 .mail-ubication:hover, .phone-ubication:hover, .mail-ubication:focus, .phone-ubication:focus{
     stroke: var(--brand-color);
-    transition: 250ms;
-}
+    }
 
 .margin-text{
     margin-right: 50px;
@@ -237,6 +236,8 @@ font-size: 26px;
 line-height: 1.19;
 letter-spacing: 0.03em;
 color: var(--brand-color);
+transition: transform 250ms ease;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-marg{
     margin: 0 93px 0 0;
@@ -246,7 +247,7 @@ color: var(--brand-color);
 .focus:hover, .focus:focus{
     color: var(--text2-color);
     background-color: var(--brand-color);
-    transition: 250ms;
+    
     }
 
 .focus{
@@ -315,7 +316,7 @@ color: var(--butt-color);
 .button:hover,.button:focus{
     background-color: #1367ac;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    transition: 250ms;
+   
 }
 .button{
     border: none;
@@ -446,7 +447,7 @@ ul, ol, li {
     fill: var(--text2-color);
     border-radius: 50%;
     background-color: var(--brand-color);
-    transition: transform 250ms ease-in-out;
+    
 }
 
 .icon-cliente-regular{
@@ -465,7 +466,6 @@ ul, ol, li {
 .icon-cliente-regular:hover{
     border: 1px solid var(--brand-color);
     fill: var(--brand-color);
-    transition: 250ms;
 }
 .icon-cr-container{
     display: flex;
@@ -476,7 +476,6 @@ ul, ol, li {
 .icon-hover:hover, .icon-hover:focus{
     fill: var(--brand-color);
     stroke: var(--brand-color);
-    transition: 250ms;
     }
 
 
@@ -510,8 +509,7 @@ padding-top:12px;
 
 .icon-footer:hover,.icon-footer:focus {
     background-color: var(--brand-color);
-    transition: 250ms;
-}
+    }
 
 .icon-footer-container{
     display: flex;
@@ -571,8 +569,7 @@ margin-top:254px;
 
 .header-contacts:hover>.mail-ubication, .header-contacts:hover>.phone-ubication, .header-contacts:focus>.phone-ubication, .header-contacts:focus>.mail-ubication {
     stroke: var(--brand-color);
-    transition: 250ms;
-}
+    }
 
 .overlay {
     position: absolute;
@@ -580,7 +577,8 @@ margin-top:254px;
     height: 100%;
     background-color:rgba(33, 150, 243, 0.9);
     transform: translateY(100%);
-    transition: transform 250ms ease-in-out;
+    transition: transform 250ms ease;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-item:hover .overlay {
@@ -602,7 +600,24 @@ margin-top:254px;
     letter-spacing: 0.03em;
     text-align: left;
     color:rgba(255, 255, 255, 1);
-    padding-left:10px;
-    padding-top: 20px;
-    padding-right: 10px;
+    padding: 63px 24px;
+    }
+
+.backdrop.is-hidden{
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.backdrop{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 250ms cubic-bezier(0.4,0,0.2,1), visibility 250ms cubic-bezier(0.4,0,0.2,1);
+    
 }
