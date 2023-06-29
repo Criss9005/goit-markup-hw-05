@@ -217,7 +217,7 @@ padding: 32px 0 32px 0;
 
 .here-port::after{
     content: "";
-    width:78px; 
+    width:68px; 
     height:4px; 
     background-color:var(--brand-color);
     display:block; 
@@ -636,23 +636,28 @@ margin-top:254px;
     
 }
 
-.btn-modal{
-   position: relative;
-   top:2px;
-   left: 95%;
-   
-}
-
 .container-box{
     display: flex;
     justify-content: center;
-    margin-top: 221px;
+    margin-top: 35px;
    
 }
 .box-modal{
-    top:221px;
-    left: 694px;
     width: 528px ;
     height: 581px ;
     background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.svg-cierre{
+    border: 1px solid gray;
+    border-radius: 50%;
+    margin-top:5px;
+    margin-right: 5px;
+}
+
+.svg-cierre:hover{
+
+cursor: pointer;    
 }
